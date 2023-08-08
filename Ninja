@@ -1,0 +1,413 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local autoclickeron = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local autoclickeroff = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local AUTOCLICKER = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local limitedegg = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local limitedeggoff = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local limitedeggon = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local autofightopen = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local autofight = Instance.new("TextLabel")
+local UICorner_8 = Instance.new("UICorner")
+local arena1 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local arena4 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local arena3 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local arena2 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local teleports = Instance.new("TextLabel")
+local UICorner_13 = Instance.new("UICorner")
+local ANTIAFK = Instance.new("TextLabel")
+local UICorner_14 = Instance.new("UICorner")
+local ANTIAFKOPEN = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.296782076, 0, 0.301219523, 0)
+Frame.Size = UDim2.new(0, 577, 0, 345)
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 577, 0, 50)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "NINJA SIMULATOR HUB BY QWERTZY"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+autoclickeron.Name = "autoclickeron"
+autoclickeron.Parent = Frame
+autoclickeron.BackgroundColor3 = Color3.fromRGB(47, 255, 0)
+autoclickeron.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoclickeron.BorderSizePixel = 0
+autoclickeron.Position = UDim2.new(0.270363957, 0, 0.188405797, 0)
+autoclickeron.Size = UDim2.new(0, 39, 0, 35)
+autoclickeron.Font = Enum.Font.SourceSans
+autoclickeron.Text = "ON"
+autoclickeron.TextColor3 = Color3.fromRGB(0, 0, 0)
+autoclickeron.TextScaled = true
+autoclickeron.TextSize = 14.000
+autoclickeron.TextWrapped = true
+autoclickeron.MouseButton1Down:connect(function()
+	_G.autoclicker = true
+	while _G.autoclicker == true do
+		local Event = game:GetService("ReplicatedStorage").Remotes.DoAction
+		Event:FireServer()
+		wait()
+	end
+end)
+
+UICorner.Parent = autoclickeron
+
+autoclickeroff.Name = "autoclickeroff"
+autoclickeroff.Parent = Frame
+autoclickeroff.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+autoclickeroff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoclickeroff.BorderSizePixel = 0
+autoclickeroff.Position = UDim2.new(0.388214916, 0, 0.188405797, 0)
+autoclickeroff.Size = UDim2.new(0, 39, 0, 35)
+autoclickeroff.Font = Enum.Font.SourceSans
+autoclickeroff.Text = "OFF"
+autoclickeroff.TextColor3 = Color3.fromRGB(0, 0, 0)
+autoclickeroff.TextScaled = true
+autoclickeroff.TextSize = 14.000
+autoclickeroff.TextWrapped = true
+autoclickeroff.MouseButton1Down:connect(function()
+	_G.autoclicker = false
+	while _G.autoclicker == true do
+		local Event = game:GetService("ReplicatedStorage").Remotes.DoAction
+		Event:FireServer()
+		wait()
+	end
+end)
+
+UICorner_2.Parent = autoclickeroff
+
+AUTOCLICKER.Name = "AUTOCLICKER"
+AUTOCLICKER.Parent = Frame
+AUTOCLICKER.BackgroundColor3 = Color3.fromRGB(113, 113, 113)
+AUTOCLICKER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AUTOCLICKER.BorderSizePixel = 0
+AUTOCLICKER.Position = UDim2.new(0.0259965342, 0, 0.188405797, 0)
+AUTOCLICKER.Size = UDim2.new(0, 116, 0, 35)
+AUTOCLICKER.Font = Enum.Font.Arial
+AUTOCLICKER.Text = "FASTER AUTO TRAIN"
+AUTOCLICKER.TextColor3 = Color3.fromRGB(0, 0, 0)
+AUTOCLICKER.TextScaled = true
+AUTOCLICKER.TextSize = 14.000
+AUTOCLICKER.TextWrapped = true
+
+UICorner_3.Parent = AUTOCLICKER
+
+limitedegg.Name = "limitedegg"
+limitedegg.Parent = Frame
+limitedegg.BackgroundColor3 = Color3.fromRGB(113, 113, 113)
+limitedegg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+limitedegg.BorderSizePixel = 0
+limitedegg.Position = UDim2.new(0.0259965342, 0, 0.342028975, 0)
+limitedegg.Size = UDim2.new(0, 116, 0, 35)
+limitedegg.Font = Enum.Font.Arial
+limitedegg.Text = "AUTO OPEN EVENT EGG"
+limitedegg.TextColor3 = Color3.fromRGB(0, 0, 0)
+limitedegg.TextScaled = true
+limitedegg.TextSize = 14.000
+limitedegg.TextWrapped = true
+
+UICorner_4.Parent = limitedegg
+
+limitedeggoff.Name = "limitedeggoff"
+limitedeggoff.Parent = Frame
+limitedeggoff.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+limitedeggoff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+limitedeggoff.BorderSizePixel = 0
+limitedeggoff.Position = UDim2.new(0.388214916, 0, 0.342028975, 0)
+limitedeggoff.Size = UDim2.new(0, 39, 0, 35)
+limitedeggoff.Font = Enum.Font.SourceSans
+limitedeggoff.Text = "OFF"
+limitedeggoff.TextColor3 = Color3.fromRGB(0, 0, 0)
+limitedeggoff.TextScaled = true
+limitedeggoff.TextSize = 14.000
+limitedeggoff.TextWrapped = true
+limitedeggoff.MouseButton1Down:connect(function()
+	_G.autohatch = false
+	while _G.autohatch == true do
+		local A_1 = 1
+		local Event = game:GetService("ReplicatedStorage").Remotes.EggEvent1
+		Event:FireServer(A_1)
+		print("hatched succesfully")
+		wait()
+	end
+end)
+
+UICorner_5.Parent = limitedeggoff
+
+limitedeggon.Name = "limitedeggon"
+limitedeggon.Parent = Frame
+limitedeggon.BackgroundColor3 = Color3.fromRGB(47, 255, 0)
+limitedeggon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+limitedeggon.BorderSizePixel = 0
+limitedeggon.Position = UDim2.new(0.270363957, 0, 0.342028975, 0)
+limitedeggon.Size = UDim2.new(0, 39, 0, 35)
+limitedeggon.Font = Enum.Font.SourceSans
+limitedeggon.Text = "ON"
+limitedeggon.TextColor3 = Color3.fromRGB(0, 0, 0)
+limitedeggon.TextScaled = true
+limitedeggon.TextSize = 14.000
+limitedeggon.TextWrapped = true
+limitedeggon.MouseButton1Down:connect(function()
+	_G.autohatch = true
+	while _G.autohatch == true do
+		local A_1 = 1
+		local Event = game:GetService("ReplicatedStorage").Remotes.EggEvent1
+		Event:FireServer(A_1)
+		print("hatched succesfully")
+		wait()
+	end
+end)
+
+UICorner_6.Parent = limitedeggon
+
+autofightopen.Name = "autofightopen"
+autofightopen.Parent = Frame
+autofightopen.BackgroundColor3 = Color3.fromRGB(47, 255, 0)
+autofightopen.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autofightopen.BorderSizePixel = 0
+autofightopen.Position = UDim2.new(0.270363957, 0, 0.495652169, 0)
+autofightopen.Size = UDim2.new(0, 106, 0, 35)
+autofightopen.Font = Enum.Font.SourceSans
+autofightopen.Text = "OPEN"
+autofightopen.TextColor3 = Color3.fromRGB(0, 0, 0)
+autofightopen.TextScaled = true
+autofightopen.TextSize = 14.000
+autofightopen.TextWrapped = true
+autofightopen.MouseButton1Down:connect(function()
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	local Window = OrionLib:MakeWindow({
+		Name = "Ninja Fighting Simulator",
+		HidePremium = false,
+		SaveConfig = true,
+		ConfigFolder = "OrionTest"
+	})
+	local Tab = Window:MakeTab({
+		Name = "Auto Win",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
+	Tab:AddParagraph("NOTE:", "Trying To Fight A Boss With A Lot More Strength Than You Will Cause The Game To Kick You. \nYou Have A 100% Win Chance.")
+
+	for i, v in pairs(game:GetService("Workspace").BillboardGuis:GetChildren()) do
+		if v:IsA("Folder") then
+			local area = tostring(v.Name)
+			local Section = Tab:AddSection({
+				Name = tostring(v.Name):gsub("Area", "Area ") .. " Auto Fight"
+			})
+			for i = 1, 5 do
+				Tab:AddToggle({
+					Name = "Fight Boss " .. tostring(i),
+					Default = false,
+					Callback = function(Value)
+						getgenv().autofight = Value
+						while autofight == true do
+							game:GetService("ReplicatedStorage").Remotes.FightOver:FireServer(area, i)
+							wait(3)
+						end
+					end
+				})
+			end
+		end
+	end
+	OrionLib:Init()
+end)
+
+
+UICorner_7.Parent = autofightopen
+
+autofight.Name = "autofight"
+autofight.Parent = Frame
+autofight.BackgroundColor3 = Color3.fromRGB(113, 113, 113)
+autofight.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autofight.BorderSizePixel = 0
+autofight.Position = UDim2.new(0.0259965342, 0, 0.495652169, 0)
+autofight.Size = UDim2.new(0, 116, 0, 35)
+autofight.Font = Enum.Font.Arial
+autofight.Text = "AUTO FIGHT"
+autofight.TextColor3 = Color3.fromRGB(0, 0, 0)
+autofight.TextScaled = true
+autofight.TextSize = 14.000
+autofight.TextWrapped = true
+
+UICorner_8.Parent = autofight
+
+arena1.Name = "arena1"
+arena1.Parent = Frame
+arena1.BackgroundColor3 = Color3.fromRGB(0, 81, 255)
+arena1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+arena1.BorderSizePixel = 0
+arena1.Position = UDim2.new(0.0346620455, 0, 0.828985512, 0)
+arena1.Size = UDim2.new(0, 106, 0, 35)
+arena1.Font = Enum.Font.SourceSans
+arena1.Text = "ARENA 1"
+arena1.TextColor3 = Color3.fromRGB(0, 0, 0)
+arena1.TextScaled = true
+arena1.TextSize = 14.000
+arena1.TextWrapped = true
+arena1.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Zones.TeleportBackToDojo.To.CFrame
+end)
+
+UICorner_9.Parent = arena1
+
+arena4.Name = "arena 4"
+arena4.Parent = Frame
+arena4.BackgroundColor3 = Color3.fromRGB(0, 81, 255)
+arena4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+arena4.BorderSizePixel = 0
+arena4.Position = UDim2.new(0.764298081, 0, 0.828985512, 0)
+arena4.Size = UDim2.new(0, 106, 0, 35)
+arena4.Font = Enum.Font.SourceSans
+arena4.Text = "ARENA 4"
+arena4.TextColor3 = Color3.fromRGB(0, 0, 0)
+arena4.TextScaled = true
+arena4.TextSize = 14.000
+arena4.TextWrapped = true
+arena4.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Zones.TeleportToArea4.To.CFrame
+end)
+
+UICorner_10.Parent = arena4
+
+arena3.Name = "arena 3"
+arena3.Parent = Frame
+arena3.BackgroundColor3 = Color3.fromRGB(0, 81, 255)
+arena3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+arena3.BorderSizePixel = 0
+arena3.Position = UDim2.new(0.512998283, 0, 0.828985512, 0)
+arena3.Size = UDim2.new(0, 106, 0, 35)
+arena3.Font = Enum.Font.SourceSans
+arena3.Text = "ARENA 3"
+arena3.TextColor3 = Color3.fromRGB(0, 0, 0)
+arena3.TextScaled = true
+arena3.TextSize = 14.000
+arena3.TextWrapped = true
+arena3.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Zones.TeleportToArea3.To.CFrame
+end)
+
+UICorner_11.Parent = arena3
+
+arena2.Name = "arena 2"
+arena2.Parent = Frame
+arena2.BackgroundColor3 = Color3.fromRGB(0, 81, 255)
+arena2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+arena2.BorderSizePixel = 0
+arena2.Position = UDim2.new(0.272097051, 0, 0.828985512, 0)
+arena2.Size = UDim2.new(0, 106, 0, 35)
+arena2.Font = Enum.Font.SourceSans
+arena2.Text = "ARENA 2"
+arena2.TextColor3 = Color3.fromRGB(0, 0, 0)
+arena2.TextScaled = true
+arena2.TextSize = 14.000
+arena2.TextWrapped = true
+arena2.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Zones.TeleportToArea2.To.CFrame
+end)
+
+UICorner_12.Parent = arena2
+
+teleports.Name = "teleports"
+teleports.Parent = Frame
+teleports.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+teleports.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teleports.BorderSizePixel = 0
+teleports.Position = UDim2.new(0.0259965342, 0, 0.655072451, 0)
+teleports.Size = UDim2.new(0, 233, 0, 40)
+teleports.Font = Enum.Font.SourceSans
+teleports.Text = "TELEPORTS"
+teleports.TextColor3 = Color3.fromRGB(255, 255, 255)
+teleports.TextScaled = true
+teleports.TextSize = 14.000
+teleports.TextWrapped = true
+
+UICorner_13.Parent = teleports
+
+ANTIAFK.Name = "ANTIAFK"
+ANTIAFK.Parent = Frame
+ANTIAFK.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+ANTIAFK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ANTIAFK.BorderSizePixel = 0
+ANTIAFK.Position = UDim2.new(0.544194102, 0, 0.188405797, 0)
+ANTIAFK.Size = UDim2.new(0, 233, 0, 44)
+ANTIAFK.Font = Enum.Font.SourceSans
+ANTIAFK.Text = "ANTI AFK"
+ANTIAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANTIAFK.TextScaled = true
+ANTIAFK.TextSize = 14.000
+ANTIAFK.TextWrapped = true
+
+UICorner_14.Parent = ANTIAFK
+
+ANTIAFKOPEN.Name = "ANTIAFKOPEN"
+ANTIAFKOPEN.Parent = Frame
+ANTIAFKOPEN.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+ANTIAFKOPEN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ANTIAFKOPEN.BorderSizePixel = 0
+ANTIAFKOPEN.Position = UDim2.new(0.580589235, 0, 0.394202888, 0)
+ANTIAFKOPEN.Size = UDim2.new(0, 190, 0, 104)
+ANTIAFKOPEN.Font = Enum.Font.SourceSans
+ANTIAFKOPEN.Text = "OPEN"
+ANTIAFKOPEN.TextColor3 = Color3.fromRGB(0, 0, 0)
+ANTIAFKOPEN.TextScaled = true
+ANTIAFKOPEN.TextSize = 14.000
+ANTIAFKOPEN.TextWrapped = true
+ANTIAFKOPEN.MouseButton1Down:connect(function()
+	wait(0.5)local ba=Instance.new("ScreenGui")
+	local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+	local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+	ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+	ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+	ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+	ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Afk"ca.TextColor3=Color3.new(0,1,1)
+	ca.TextSize=22;da.Parent=ca
+	da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+	da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+	_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+	_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by Headshot#5868"
+	_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+	ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+	ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+	ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+		bb:CaptureController()bb:ClickButton2(Vector2.new())
+		ab.Text="Roblox kicked you but we didnt let them!"wait(2)ab.Text="Status : Active"end)
+end)
+
+UICorner_15.Parent = ANTIAFKOPEN
